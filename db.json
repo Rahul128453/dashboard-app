@@ -1,0 +1,220 @@
+{
+  "orders": [
+    {
+      "day": "01",
+      "current": 20,
+      "last": 35,
+      "id": "HjjasWH9fww"
+    },
+    {
+      "day": "02",
+      "current": 15,
+      "last": 45,
+      "id": "5TlxF2XmiWA"
+    },
+    {
+      "day": "03",
+      "current": 40,
+      "last": 20,
+      "id": "Nvk8FDHMGR4"
+    },
+    {
+      "day": "04",
+      "current": 138,
+      "last": 45,
+      "id": "9dWATdFj0Fk"
+    },
+    {
+      "day": "05",
+      "current": 20,
+      "last": 35,
+      "id": "kKn_AaQUYg8"
+    },
+    {
+      "day": "06",
+      "current": 60,
+      "last": 40,
+      "id": "tztCiE3WIKE"
+    }
+  ],
+  "revenue": [
+    {
+      "day": "01",
+      "current": 40,
+      "last": 30,
+      "id": "ciMnSAUW7Yg"
+    },
+    {
+      "day": "02",
+      "current": 25,
+      "last": 35,
+      "id": "eiCCHjJs6V4"
+    },
+    {
+      "day": "03",
+      "current": 30,
+      "last": 28,
+      "id": "9T911kt0r7I"
+    },
+    {
+      "day": "04",
+      "current": 20,
+      "last": 25,
+      "id": "WPXgfmCBnRU"
+    },
+    {
+      "day": "05",
+      "current": 45,
+      "last": 30,
+      "id": "N8owEpp0DdQ"
+    },
+    {
+      "day": "06",
+      "current": 55,
+      "last": 40,
+      "id": "gqx4CbEw7ag"
+    },
+    {
+      "day": "07",
+      "current": 35,
+      "last": 20,
+      "id": "AFmv4BqrXiA"
+    },
+    {
+      "day": "08",
+      "current": 25,
+      "last": 30,
+      "id": "kWxuEd19lJE"
+    },
+    {
+      "day": "09",
+      "current": 30,
+      "last": 35,
+      "id": "vpWE5rkptrc"
+    },
+    {
+      "day": "10",
+      "current": 20,
+      "last": 25,
+      "id": "YZE-E2hND8w"
+    },
+    {
+      "day": "11",
+      "current": 50,
+      "last": 35,
+      "id": "ZYqa0JmwkV8"
+    },
+    {
+      "day": "12",
+      "current": 60,
+      "last": 30,
+      "id": "X3zYRn3v7P8"
+    }
+  ],
+  "orderTime": [
+    {
+      "name": "Afternoon",
+      "value": 40,
+      "timeRange": "1pm - 4pm",
+      "orders": 1890,
+      "id": "l4aS_zlR3wU"
+    },
+    {
+      "name": "Evening",
+      "value": 32,
+      "timeRange": "5pm - 8pm",
+      "orders": 1520,
+      "id": "daV7iwneasI"
+    },
+    {
+      "name": "Morning",
+      "value": 28,
+      "timeRange": "9am - 12pm",
+      "orders": 980,
+      "id": "WkF6QfoC0b0"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hygiene",
+      "percentage": 85,
+      "color": "#8884d8",
+      "top": "0px",
+      "left": "100px",
+      "size": "140px",
+      "id": "jvq4FNc0HgE"
+    },
+    {
+      "label": "Packaging",
+      "percentage": 92,
+      "color": "#00bcd4",
+      "top": "150px",
+      "left": "20px",
+      "size": "150px",
+      "id": "UdE1w8qtpdk"
+    },
+    {
+      "label": "Food Taste",
+      "percentage": 65,
+      "color": "#ffb347",
+      "top": "100px",
+      "left": "180px",
+      "size": "200px",
+      "id": "wWhcQ4qO1Wc"
+    }
+  ],
+  "mostOrderedFood": [
+    {
+      "name": "Fresh Salad Bowl",
+      "price": "IDR 45.000",
+      "image": "https://i.imgur.com/1.jpg",
+      "id": "wZ4R8y4iWQw"
+    },
+    {
+      "name": "Chicken Noodles",
+      "price": "IDR 75.000",
+      "image": "https://i.imgur.com/2.jpg",
+      "id": "xY9-TcK1pzo"
+    },
+    {
+      "name": "Smoothie Fruits",
+      "price": "IDR 245.000",
+      "image": "https://i.imgur.com/3.jpg",
+      "id": "N4io-8xt2k0"
+    },
+    {
+      "name": "Hot Chicken Wings",
+      "price": "IDR 415.000",
+      "image": "https://i.imgur.com/4.jpg",
+      "id": "SuVf-uK6xMk"
+    }
+  ],
+  "auth": [
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "token": "mock-jwt-token",
+      "user": {
+        "name": "Rahul Mondal",
+        "email": "admin@gmail.com"
+      },
+      "id": "XFHJqjhvJfg"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": "L21yUDHkK4A"
+    },
+    {
+      "email": "imrahulmondal4@gmail.com",
+      "password": "123456",
+      "id": "qZKnINYcjP8"
+    },
+    {
+      "email": "imrahulmondal4@gmail.com",
+      "password": "123456",
+      "id": "HtjgdBj4L8I"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
