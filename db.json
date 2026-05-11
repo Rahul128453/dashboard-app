@@ -203,16 +203,31 @@
     {
       "email": "admin@gmail.com",
       "password": "123456",
+      "token": "mock-jwt-token",
+      "user": {
+        "name": "Rahul Mondal",
+        "email": "admin@gmail.com"
+      },
       "id": "L21yUDHkK4A"
     },
     {
       "email": "imrahulmondal4@gmail.com",
       "password": "123456",
+      "token": "mock-jwt-token",
+      "user": {
+        "name": "Rahul Mondal",
+        "email": "imrahulmondal4@gmail.com"
+      },
       "id": "qZKnINYcjP8"
     },
     {
       "email": "imrahulmondal4@gmail.com",
       "password": "123456",
+      "token": "mock-jwt-token",
+      "user": {
+        "name": "Rahul Mondal",
+        "email": "imrahulmondal4@gmail.com"
+      },
       "id": "HtjgdBj4L8I"
     }
   ],

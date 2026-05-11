@@ -11,11 +11,24 @@ export interface AuthState {
     isAuthenticated: boolean;
 }
 
-const initialState: AuthState = {
-    token: null,
-    user: null,
-    isAuthenticated: false,
+const getInitialState = (): AuthState => {
+    // Try to rehydrate from localStorage
+    const stored = localStorage.getItem("authState");
+    if (stored) {
+        try {
+            return JSON.parse(stored);
+        } catch (e) {
+            console.error("Failed to parse stored auth state", e);
+        }
+    }
+    return {
+        token: null,
+        user: null,
+        isAuthenticated: false,
+    };
 };
+
+const initialState: AuthState = getInitialState();
 
 const authSlice = createSlice({
     name: "auth",
@@ -28,11 +41,15 @@ const authSlice = createSlice({
             state.token = action.payload.token;
             state.user = action.payload.user;
             state.isAuthenticated = true;
+            // Persist to localStorage
+            localStorage.setItem("authState", JSON.stringify(state));
         },
         logout: (state) => {
             state.token = null;
             state.user = null;
             state.isAuthenticated = false;
+            // Clear from localStorage
+            localStorage.removeItem("authState");
         },
     },
 });
