@@ -9,22 +9,30 @@ export interface AuthState {
     token: string | null;
     user: User | null;
     isAuthenticated: boolean;
+    loading: boolean;
 }
 
 const getInitialState = (): AuthState => {
     // Try to rehydrate from localStorage
-    const stored = localStorage.getItem("authState");
-    if (stored) {
-        try {
-            return JSON.parse(stored);
-        } catch (e) {
-            console.error("Failed to parse stored auth state", e);
+    if (typeof window !== "undefined") {
+        const stored = localStorage.getItem("authState");
+        if (stored) {
+            try {
+                const parsed = JSON.parse(stored);
+                return {
+                    ...parsed,
+                    loading: false,
+                };
+            } catch (e) {
+                console.error("Failed to parse stored auth state", e);
+            }
         }
     }
     return {
         token: null,
         user: null,
         isAuthenticated: false,
+        loading: false,
     };
 };
 
@@ -41,18 +49,43 @@ const authSlice = createSlice({
             state.token = action.payload.token;
             state.user = action.payload.user;
             state.isAuthenticated = true;
+            state.loading = false;
             // Persist to localStorage
-            localStorage.setItem("authState", JSON.stringify(state));
+            if (typeof window !== "undefined") {
+                localStorage.setItem("authState", JSON.stringify({
+                    token: state.token,
+                    user: state.user,
+                    isAuthenticated: state.isAuthenticated,
+                }));
+            }
         },
         logout: (state) => {
             state.token = null;
             state.user = null;
             state.isAuthenticated = false;
+            state.loading = false;
             // Clear from localStorage
-            localStorage.removeItem("authState");
+            if (typeof window !== "undefined") {
+                localStorage.removeItem("authState");
+            }
+        },
+        rehydrateFromStorage: (state) => {
+            if (typeof window !== "undefined") {
+                const stored = localStorage.getItem("authState");
+                if (stored) {
+                    try {
+                        const parsed = JSON.parse(stored);
+                        state.token = parsed.token;
+                        state.user = parsed.user;
+                        state.isAuthenticated = parsed.isAuthenticated;
+                    } catch (e) {
+                        console.error("Failed to rehydrate auth state", e);
+                    }
+                }
+            }
         },
     },
 });
 
-export const { setCredentials, logout } = authSlice.actions;
+export const { setCredentials, logout, rehydrateFromStorage } = authSlice.actions;
 export default authSlice.reducer;

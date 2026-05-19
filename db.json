@@ -221,14 +221,59 @@
       "id": "qZKnINYcjP8"
     },
     {
-      "email": "imrahulmondal4@gmail.com",
+      "email": "admin@gmail.com",
       "password": "123456",
       "token": "mock-jwt-token",
       "user": {
         "name": "Rahul Mondal",
-        "email": "imrahulmondal4@gmail.com"
+        "email": "admin@gmail.com"
       },
-      "id": "HtjgdBj4L8I"
+      "id": "XFHJqjhvJfg"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": "O5cUP3eHQtA"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": "Ol8mekYzoEQ"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": "tscNBDLoB1g"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": "uRHqHVvPBXg"
+    },
+    {
+      "email": "imrahulmondal4@gmail.com",
+      "password": "123456",
+      "id": "Jv3wN8fkKeM"
+    },
+    {
+      "email": "imrahulmondal4@gmail.com",
+      "password": "123456",
+      "id": "4Yow5giIUu8"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": "yxL_F8fOm-8"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": "u5EMR_SK04U"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "id": "8SWZyb9-kNE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

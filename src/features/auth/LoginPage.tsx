@@ -26,13 +26,21 @@ const LoginPage = () => {
         try {
             const res = await login({ email, password }).unwrap();
 
+            if (!res?.token || !res?.user) {
+                throw new Error("Invalid auth response from server");
+            }
+
             dispatch(setCredentials(res));
 
-            // redirect to dashboard
-            navigate("/");
-        } catch (error) {
+            +            // redirect to dashboard
+                navigate("/");
+        } catch (error: any) {
             console.error('Login failed:', error);
-            setErrorMsg("Invalid email or password");
+            const errorMessage =
+                error?.data?.error ||
+                error?.message ||
+                (error?.data ? JSON.stringify(error.data) : "Invalid email or password");
+            setErrorMsg(errorMessage);
         }
     };
 
