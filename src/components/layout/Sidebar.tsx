@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
     LayoutDashboard,
     ShoppingCart,
@@ -25,14 +24,13 @@ const otherItems = [
 ];
 
 type Props = {
+    active: string;
     onChange?: (key: string) => void;
 };
 
-const Sidebar = ({ onChange }: Props) => {
-    const [active, setActive] = useState("dashboard");
+const Sidebar = ({ active, onChange }: Props) => {
 
     const handleClick = (key: string) => {
-        setActive(key);
         onChange?.(key);
     };
 
@@ -55,7 +53,7 @@ const Sidebar = ({ onChange }: Props) => {
     };
 
     return (
-        <div className="w-[240px] bg-white h-fullS p-6 flex flex-col justify-between border-r border-gray-200 mr-3">
+        <div className="w-[240px] bg-white h-fullS p-6 flex flex-col justify-between">
 
             <div>
 

@@ -7,19 +7,13 @@ import RevenueCard from "./components/RevenueCard";
 const DashboardPage = () => {
     return (
         <div className="grid grid-cols-3 gap-[24px]">
-
             <div className="col-span-2">
                 <RevenueCard />
             </div>
-
             <OrderTimeCard />
-
             <RatingChart />
-
             <MostOrderedFoodApp />
-
             <OrdersCard />
-
         </div>
     );
 };
